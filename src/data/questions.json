@@ -1,0 +1,905 @@
+[
+  {
+    "id": 1,
+    "type": "judge",
+    "question": "openEuler启动时会读取fstab中的配置，进行自动挂载。无论挂载NAS、SAN或者Gluster，都要在挂载参数中添加“_netdev”，否则挂载会由于网络服务未启动而失败，最终导致系统启动失败。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 2,
+    "type": "judge",
+    "question": "在Nginx作为反向代理时，客户端向代理请求资源时使用的端口，可以和服务器提供服务端口不一致。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 3,
+    "type": "judge",
+    "question": "某企业使用LNMP架构搭建了一套Web服务集群，客户端发起请求时的目的端口为80，服务器端可以使用非80端口给反向代理提供资源。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 4,
+    "type": "judge",
+    "question": "在SAN存储中，每个 target 可以关联多个LUN，一个target可以被多个initiator连接，并且target中的每个LUN可以映射给一个initiator使用。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 5,
+    "type": "judge",
+    "question": "某企业计划使用 Nginx 作为反向代理，节省IP地址资源并保护真实web服务器，在配置过程中，需要在 Nginx 中安装https所需的模块并添加代理 export https_proxy=需要代理的https访问地址，并使其配置生效即可。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 6,
+    "type": "judge",
+    "question": "某企业内部业务系统较多，所有业务系统均基于LAMP架构实现，为了在访问时更好的区分不同业务，运维工程师使用了LVS的虚拟主机功能来配置不同的域名对应不同的业务。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 7,
+    "type": "judge",
+    "question": "某企业使用LNMP架构在华为云ECS上搭建了一套Web服务集群，主机规格为2vCPUs，内存4 GiB，并使用 Keepalived 为LVS提供高可用配置。当有两个客户端同时请求Web服务时，默认情况下 Nginx 服务器会根据负载均衡算法逐个进行响应。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 8,
+    "type": "judge",
+    "question": "某企业的业务访问性能要求较高，工程师为了能够最大限度的提高服务器利用率和业务访问效率，使用Keepalived将多个Nginx 服务器连接在一起，以提高业务的整体性能。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 9,
+    "type": "judge",
+    "question": "某企业有两台 Apache 服务器，为了实现高可用，两台服务器需要做主备，工程师可以利用Keepalived，使用独立的网段在两台服务器之间搭建心跳网络，实现 Apache 服务器集群的主备功能。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 10,
+    "type": "judge",
+    "question": "为实现最小化的访问控制，建议 GlusterFS 每创建一个卷就在 iptables 上新开放一个端口。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 11,
+    "type": "judge",
+    "question": "绝大部分 Ansible playbook的任务可以通过shell脚本来实现，如果任务对应的功能是无状态的，如web服务器搭建，建议使用Ansible playbook来实现，如果任务对应的功能是有状态的，如firewall规则配置，建议使用shell脚本实现。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 12,
+    "type": "judge",
+    "question": "某大型企业IT设备分布在两个城市，其中有两台 Nginx 服务器运行在两地，建议工程师使用 LVS 实现两台服务器的负载均衡。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 13,
+    "type": "judge",
+    "question": "在LAMP架构的应用中，为了保证 MySQL 数据库中的数据不丢失，建议使用主备或主从架构，并将 log-bin 的日志文件保存在 GlusterFS 提供的分布式卷中。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 14,
+    "type": "judge",
+    "question": "NFS 服务器提供共享存储时，如果需要向所有用户开放共享目录/share/data 的读写权限，需要在配置文件/etc/exports中添加/share/data *(ro.sync)",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 15,
+    "type": "judge",
+    "question": "Nginx 和 Apache 一样，均采用模块化的设计，支持丰富的第三方模块，并且支持利用Linux的多线程原理实现客户端请求的并发处理。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 16,
+    "type": "judge",
+    "question": "在当今IT系统中，几乎所有的业务都是集群化部署，当其中一个业务主机发生故障时，集群内其他主机会自动接管故障主机的任务，用户侧几乎是无感知的，但实际总体性能会下降。为了保证性能迅速恢复，管理员可通过自动化运维工具，如Ansible、SaltStack等，自动对备用空服务器进行上电和安装操作系统，同时将部署应用的Shell脚本发送到该主机上并自动运行，迅速使其升级为业务主机。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 17,
+    "type": "judge",
+    "question": "Zabbix Server，Zabbix的Web页面，Nginx 三者可以在不同的服务器中部署。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 18,
+    "type": "judge",
+    "question": "某企业IT集群中的服务器性能相近，使用最少连接算法可以进行较好的负载均衡，在该场景中，LVS、Nginx、HAProxy 均可以满足需求。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 19,
+    "type": "judge",
+    "question": "在企业IT架构中，为了提高业务访问效率，可以部署多台服务器，并使用LVS做负载均衡，其中LVS的调度算法包含静态调度算法和动态调度算法，这两种算法均不需要根据工作模式来调整。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 20,
+    "type": "judge",
+    "question": "某企业使用四台服务器搭建了Nginx集群，在配置高可用时，Keepalived不仅能利用VRRP协议实现两项双机热备，也可以同时热备所有服务器，来满足该企业的需求。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 21,
+    "type": "judge",
+    "question": "Glusterfs的默认卷类型为分布式，在该模式下，数据未进行冗余保护，一旦一个节点损坏，数据就会全部丢失，因此该模式不建议使用在LNMP架构中。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 22,
+    "type": "judge",
+    "question": "在LNMP架构中，firewalld需要在每个节点中都开启并配置。在Nginx服务器中，需要放通其对应的业务端口，同时需要放通访问数据库的端口。在数据库服务器中，需要放通对应的业务接口即可。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 23,
+    "type": "judge",
+    "question": "在LAMP架构的应用中，web服务的静态页面被保存在GlusterFS提供的卷中，为了保证性能，管理员通过GlusterFS原生客户端的方式，将卷挂载到web服务器指定目录下。另外，保证web服务器重启后能够自动挂载该卷，管理员采用了编写相应的shell脚本，使其开机自动运行，作为最佳实现方式。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 24,
+    "type": "judge",
+    "question": "某业务使用LVS做负载均衡，其对外虚拟IP为192.168.1.21端口号为80，DIP为172.16.1.21，实际业务主机地址为172.16.1.33-37，端口号为8087。其用户IP为192.168.100.100访问业务，向LVS发起请求。请求被分发到实际业务主机时，业务主机收到的请求报文的目的地址为172.16.1.21，端口号为8087。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 25,
+    "type": "judge",
+    "question": "某企业计划搭建Web服务集群，为了实现web服务的高可用，可以通过Nginx提供的七层负载均衡功能来实现。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 26,
+    "type": "judge",
+    "question": "在一台Apache服务器上运行了多台虚拟主机，每个虚拟主机可以对应多个Web服务，用户可以使用不同的端口号来访问不同的资源。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 27,
+    "type": "judge",
+    "question": "数据库是LAMP中非常重要的部分，保存着全部的业务数据。为了保证数据的可靠性，管理员将SAN存储LUN挂载到不同的节点上，作为Glusterfs的brick，最后再使用brick组成复制卷用来存放数据。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 28,
+    "type": "judge",
+    "question": "使用命令 find / -nouser | xargs -i test -s {} && echo $? 可直接出无主的文件或目录，并确定这些文件是否为空。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 29,
+    "type": "judge",
+    "question": "修改Apache服务器的监控端口，可使用awk命令对配置文件中的Listen字段进行修改。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 30,
+    "type": "judge",
+    "question": "某企业现存的一台基于Nginx的web服务器无法满足业务需求，为了提高业务的整体性能，新购买了一台服务器与之前的服务器组成Nginx集群，并利用Nginx集群本身的负载均衡能力，来提高访问性能。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "question": "某企业在内网新增了多个业务，并通过域名+不同URL的方式来进行访问，其中域名使用的企业固定域名。以下哪个工具可实现该需求？",
+    "options": ["A. Keepalived", "B. Apache", "C. LVS", "D. Nginx"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "question": "以下关于Keepalived和LVS的描述中，错误的是哪一项？",
+    "options": ["A. LVS本身只能完成负载均衡的调度", "B. 虚拟IP是Keepalived提供的，而不是LVS本身自带的", "C. Keepalived最初是为LVS设计的", "D. LVS的负载均衡可以避免单点故障"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "question": "以下哪个选项符合http的工作机制？",
+    "options": ["A. 客户向Apache服务器发起请求，Apache服务器通过路径重定向找到对应的资源，将其反馈给用户，同时保存一份到数据库中，进行事务记录", "B. 客户向Apache服务器发起请求，Apache服务器检查firewalld的策略，将符合执行规则的资源反馈给用户", "C. 客户向web服务器发起请求，为web服务器进行负载均衡的vss会首先对该请求进行响应，并检查客户端所请求的资源是否在本地缓存。如果有，直接反馈给客户，如果没有再向后端的web服务器进行获取，最后反馈给客户", "D. 客户向web服务器发起请求，web服务器收到请求后，可从其他web服务器上读取和调用所需的资源，然后进行整合，并将其反馈给客户"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "question": "在某企业中，管理员使用 Nginx 为三台 Apache 服务器提供反向代理，被代理的url分别为 www.test80.com:80、www.test81.com:81和www.test82.com:82，配置完成后，用户通过 www.test.com:80可以访问对应的业务。如果 Nginx 服务所使用的网卡绑定在public zone，根据最小化的安全策略，管理员应在 Nginx 上的public zone中放通哪个端口？",
+    "options": ["A.82", "B.80、81、82和53", "C.80", "D.81"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "question": "某 wordpress 网站集群挂载 GlusterFS 的卷作为后台存储，保存网站的静态数据。GlusterFS使用三台主机组成存储池，并使用keepalived的虚拟IP对外提供服务。以下关于此场景下不同类型存储卷的描述中，错误的是哪一项？",
+    "options": ["A. 三台主机组成卷分卷，其中两台主机损坏，wordpress网站中全部静态数据仍可正常访问", "B. 三台主机组成分布卷，其中一台主机损坏，wordpress网站中部分静态数据将无法正常使用", "C. 三台主机组成分布卷，其中两台主机损坏，wordpress网站中部分静态数据仍可正常访问", "D. 三台主机组成复制卷，其中一台主机损坏，wordpress网站中全部静态数据仍可正常访问"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "question": "使用 Apache 搭建网站服务集群，两台服务器的IP地址分别10.0.0.1和10.0.0.2，前端使用 Nginx 作为负载均衡代理，其地址为192.168.1.1。使用 DNS 服务进行地址解析，用户访问 www.test.com 时即可访问该网站。请问在 DNS 配置中配置哪个解析，可以实现用户需求？",
+    "options": ["A. www AAAA 192.168.1.1", "B. www MX 192.168.1.1", "C. www A 192.168.1.1", "D. www PTR 192.168.1.1"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "question": "Keepalived 不适用于以下哪种业务的集群搭建？",
+    "options": ["A. web 服务集群", "B. Zabbix 集群", "C. LVS 集群", "D. DNS 集群"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "question": "某企业在进行IT架构设计时，计划使用LVS来实现负载均衡，如果后端服务器数量较多，网段无法统一，以下哪项为合理的设计方案？",
+    "options": ["A. 使用 NAT 模式对后端服务器进行负载均衡", "B. 将后端服务器的IP地址修改为同一网段，然后使用DR模式进行负载均衡", "C. 使用 DR 模式对后端服务器进行负载均衡", "D. 为LVS服务器配置多个网卡和IP地址，根据后端服务的业务量选择合适的模式进行负载均衡"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "question": "在进行 GlusterFS 集群搭建时，以下哪个选项中的操作，相比 ansible playbook，更适合使用 shell 脚本完成？",
+    "options": ["A. 安装并配置 Keepalived 以实现 GlusterFS 的高可用", "B. 周期性检查 bricks 所在磁盘的容量", "C. 获取 node 节点所有磁盘容量", "D. 在 DNS 服务器中添加 node 主机名解析"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 40,
+    "type": "single",
+    "question": "使用 Nginx 作为负载均衡器，将流量转发至后端 Nginx 服务集群 web01 (10.0.0.7) 和 web02 (10.0.0.8)。在实际转发分配中要求在保证所有服务都可以接收到请求的情况下，web01接受更多请求，可以使用以下哪个配置实现？",
+    "options": ["A. upstream load_pass { ip_hash; server 10.0.0.7:80 weight=5; server 10.0.0.8:80 down; }", "B. upstream load_pass { server 10.0.0.7:80 weight=5; server 10.0.0.8:80; }", "C. upstream load_pass { server 10.0.0.7:80; server 10.0.0.8:80; }", "D. upstream load_pass { server 10.0.0.7:80; server 10.0.0.8:80 backup; }"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "question": "某企业新采购了两台性能较好的服务器，用来替换两台老性能较差易机。运行了web服务的旧服务器，工程师为了实现服务的高可用，以下哪一种方案是不可取的？",
+    "options": ["A. 两台新服务器借助Keepalived组成web高可用集群", "B. 一台新服务器运行多个虚拟机主机，并组成web集群，另外一台服务器作为负载均衡部署在前端", "C. 两台新服务器使用虚拟机主机组成不同的web集群，使用keepalived为其提供高可用", "D. 将两台新服务器加入到现有业务集群中，逐步接收旧服务器的流量，最后等系统稳定后，再将旧服务器下载"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "question": "某工程师在使用LVS对web服务进行负载均衡时，为了提高LVS的转发效率，同时避免其不成为整个架构的性能瓶颈，建议使用以下哪种模式？",
+    "options": ["A. RR", "B. DR", "C. NAT", "D. TUN"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 43,
+    "type": "single",
+    "question": "根据下图中 CPU 的信息，Nginx 启动后会默认自动创建多少个worker进程？ \n (4CPU)",
+    "options": ["A. 3", "B. 4", "C. 5", "D. 2"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 44,
+    "type": "single",
+    "question": "某工程师想要使用LVS的NAT工作模式实现负载均衡，VIP为192.168.1.10，DIP为10.0.0.1，其中一台RS的IP为10.0.0.2，则以下哪一条添加RS的配置是正确的？",
+    "options": ["A. ipvsadm-a-t 10.0.0.1:80-r 10.0.0.2", "B. ipvsadm-a-t 192.168.1.10:80-r 10.0.0.2-m", "C. ipvsadm-a-t 192.168.1.10:80-r 10.0.0.2", "D. ipvsadm-a-t 10.0.0.2:80-r 10.0.0.1-m"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 45,
+    "type": "single",
+    "question": "某工程师下载了Nginx 的源码安装包，在安装完编译依赖环境后，需要使用以下哪个工具执行编译构建？",
+    "options": ["A. Ninja", "B. make", "C. GNU", "D. newlib"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 46,
+    "type": "single",
+    "question": "黑客通过某种方式入侵了企业内网，现在尝试对业务系统进行攻击，以下关于攻击方法和现象描述中，错误的是哪一项？",
+    "options": ["A. 黑客已知企业正在使用 NFS 相关业务功能，因此考虑从udp 111端口进行攻击", "B. 某内部网站使用LVS负载均衡，黑客针对LVS的80端口进行泛洪攻击，达到网站瘫痪目的", "C. 黑客通过端口扫描，发现某一IP启用了3389端口，因此计划采用插座的方式进行攻击", "D. 在通过ping命令扫描内网设备时，发现所有IP都提示“无法访问目标主机”，可能原因是Eiptables里配置了REJECT"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 47,
+    "type": "single",
+    "question": "大型企业需要部署一万台服务器，为了更高效的完成业务的安装部署任务，可以采用自动化运维工具。在该场景中，以下哪一项运维工具能够更好地满足需求？",
+    "options": ["A. Ansible", "B. SaltStack", "C. Shell", "D. Puppet"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 48,
+    "type": "single",
+    "question": "某工程师使用三台性能不同的服务器进行web服务集群的搭建，为了保证各个服务器的性能都能被充分利用，同时还需要保证该集群业务的可用性，以下哪个选项为较合理的设计方案？",
+    "options": ["A. 使用一台服务器配置Nginx为另外两台做负载均衡，使用轮询算法为后端应用服务器做负载均衡", "B. 使用一台服务器配置Nginx为另外两台做负载均衡，配置虚拟主机，使用不同端口区分不同服务", "C. 使用一台服务器配置Nginx为另外两台做负载均衡，使用权重算法为后端应用服务器做负载均衡，性能高的权重高", "D. 配置虚拟主机，其中两个虚拟主机位于不同物理服务器上，使用keepalived实现高可用集群，同时这两台虚拟主机使用合理的算法为其他虚拟主机提供负载均衡调度"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 49,
+    "type": "single",
+    "question": "某工程师配置Nginx为后端服务器做负载均衡，根据以下配置分析，哪个选项中的服务器响应访问的次数最多？ upstream xxx { server 192.168.1.11 down; server 192.168.1.12 weight=2; server 192.168.1.13; server 192.168.1.14 backup; }",
+    "options": ["A. 192.168.1.11", "B. 192.168.1.12", "C. 192.168.1.13", "D. 192.168.1.14"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 50,
+    "type": "single",
+    "question": "某工程师计划使用Zabbix监控企业中的服务器，在安装配置完Zabbix后，发现Zabbix Server无法启动，以下哪一项不是导致该问题的原因？",
+    "options": ["A. 数据库密码配置错误", "B. 数据库未安装到Zabbix服务器中", "C. 数据库中未为Zabbix创建库和用户", "D. 数据库中未导入Zabbix数据表"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 51,
+    "type": "single",
+    "question": "某企业使用 Nginx 做了负载均衡，其工程师在日常运维过程中，发现 Nginx 从来没有向某个后端服务器转发过请求，以下哪一项是导致该问题的最有可能原因？",
+    "options": ["A. 该后端服务器被配置为 down", "B. 该后端服务器被配置为 weight=0", "C. 该后端服务器 max_conns 配置为1", "D. 该后端服务器没有配置 weight"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 52,
+    "type": "single",
+    "question": "以下关于互联网的描述，哪个选项是正确的？",
+    "options": ["A. Nginx 在互联网中可以作为 web 服务器端，成为万维网的一个节点", "B. Nginx 在万维网中可以作为 ftp 服务器的反向代理，并与ftp服务器的数量一一对应", "C. ansible 可以批量部署 Nginx 服务器，并对其进行实时监控", "D. 互联网上的资源需使用 Nginx 进行七层反向代理，才能被通过http方式访问到"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 53,
+    "type": "single",
+    "question": "根据下图分析，以下哪个选项的描述是正确的？ HTTP/1.1 200 Server: CloudAMF Date: Thu, 01 Jun 2023 00:36:39 GMT Content-Type: text/plain; charset=UTF-8 Transfer-Encoding: chunked Connection: keep-alive Lubanop: grnec-id: v-710397-1685579799386-199328934 Lubanop: new-id: 179450 Access-Control-Allow-Origin: * X-Kong-Upscreen-Latency: 10 X-Kong-Prosy-Latency: 1 Expires: Thu, 08 Jun 2023 00:36:39 GMT Cache-Control: max-age=604800 Cache-Control: public X-Frame-Options: SANEORIGIN X-Content-Type-Options: nosniff X-Download-Options: noopen X-XSS-Protection: i; node=block Content-Encoding: gzip",
+    "options": ["A. 图中展示的是HTTP请求报文头，此次请求连接正常", "B. 图中展示的是HTTP响应报文头，此次连接为长连接", "C. 图中展示的是HTTP请求报文头，此次请求的服务器使用的是HTTP版本为1.1", "D. 图中展示的是HTTP响应报文头，此次连接的服务器前端使用了keepalived进行负载均衡"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 54,
+    "type": "single",
+    "question": "根据下图进行分析，哪个选项是正确的？\n :80",
+    "options": ["A. 当前服务器上运行了 Nginx 服务，可通过 http 对其进行访问", "B. 当前服务器上运行了 Nginx 服务，可通过 https 对其进行访问", "C. 当前服务器上运行了 ssh 服务，但禁止了root登录", "D. 当前服务器上运行了 ssh 服务，仅能通过密码方式登陆"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 55,
+    "type": "single",
+    "question": "以下哪个场景适合使用 SAN 作为两台服务器的共享存储？",
+    "options": ["A. 两台服务器运行了基于 openEuler 的 Apache 集群", "B. 两台服务器运行了基于 openEuler 的 OpenStack 集群", "C. 两台服务器运行了基于 openEuler 的 MySQL 集群", "D. 两台服务器运行了基于 openEuler 的 DNS 集群"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 56,
+    "type": "single",
+    "question": "以下关于存储及其使用方式的描述中，错误的是哪一项？",
+    "options": ["A. 某医院计划新建病历影像库，适合使用 GlusterFS 作为存储", "B. 使用文件系统存储，Gluster作为分布式存储，可靠性和性能有保障", "C. 某银行建设交易系统数据库，适合使用 FC SAN 作为存储", "D. 某公司互联网业务使用 Redis 作为缓存，适合使用 IP SAN 作为存储"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 57,
+    "type": "single",
+    "question": "某工程师使用 Nginx 的虚拟主机功能，对于同一台服务器上的不同资源，使用不同的端口号来区分，配置完成后发现不同端口访问的是同一个资源，那么可能存在的配置错误为以下哪一项？",
+    "options": ["A. 关于虚拟主机的子配置文件 vhost.conf 中 server 模块的 root 配置相同，且未配置 index", "B. 关于虚拟主机的子配置文件 vhost.conf 中 server 模块的 index 配置相同", "C. 主配置文件 conf.d 中未包含虚拟主机相关的配置", "D. 主配置文件 conf.d 中也添加了相同的配置"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 58,
+    "type": "single",
+    "question": "某工程师在配置 HAProxy 时，制定了以下规则： frontend main *:80 acl url_test path_end-i .jpg .gif .png .css.js use backend static if url_test default backend my_webserver 用户在访问 www.test.com:8080/test.JPG 时，会得到以下哪个响应？",
+    "options": ["A. path_end 对应的服务器返回的资源", "B. my_webserver 对应的服务器返回的资源", "C. 资源不存在的报错信息", "D. 权限不足的报错信息"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 59,
+    "type": "single",
+    "question": "某工程师需要使用 Ansible命令 ansible test -m yum -a \"name=httpd state=present\" 在主机中成功安装了 httpd 服务，但用户去无法正常访问到默认页，以下哪个选项是可能原因？",
+    "options": ["A. test主机中 SE Linux 的状态为 enforcing", "B. httpd 服务未启动", "C. test主机的 firewall 状态为 disable", "D. 用户与 test主机之间未配置免费登录"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 60,
+    "type": "single",
+    "question": "以下哪个选项可以判断 Nginx 是否启用了负载均衡配置？",
+    "options": ["A. crep upstream /etc/nginx/nginx.conf /etc/nginx/conf.d/*", "B. grep location /etc/nginx/*", "C. grep server /etc/nginx/nginx.conf /etc/nginx/conf.d/*", "D. grep proxy_pass /etc/nginx/*"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 61,
+    "type": "single",
+    "question": "以下关于 SAN 存储的描述，哪个选项是正确的？",
+    "options": ["A. SAN 存储需依赖 IP 网络才能实现", "B. SAN存储属于集中式存储", "C. SAN存储属于分布式存储", "D. SAN存储仅供集群使用"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 62,
+    "type": "multiple",
+    "question": "某工程师使用 Nginx 为三台 Apache 服务器提供负载均衡功能，完成配置后，该工程师进行高可用性测试，发现每次访问都是同一台 Apache 服务器响应。以下哪些选项是造成这种现象的可能原因？",
+    "options": ["A. 剩余两台服务器被添加了backup配置", "B. Nginx 配置了IP Hash算法", "C. 剩余两台 Apache 服务器出现故障", "D. Nginx 配置了虚拟主机"],
+    "correctAnswer": ["B", "C"]
+  },
+  {
+    "id": 63,
+    "type": "multiple",
+    "question": "某企业使用 Glusterfs 分布式存储存放业务数据，该业务选择使用由4块Bricks组成的分散卷保存数据。在进行配置时，以下哪些选项不可作为disperse和redundancy的组合？",
+    "options": ["A. disperse为 2, redundancy为 2", "B. disperse为 4, redundancy为 2", "C. disperse为 4, redundancy为 1", "D. disperse为 3, redundancy为 1"],
+    "correctAnswer": ["A", "B","D"]
+  },
+  {
+    "id": 64,
+    "type": "multiple",
+    "question": "某工程师使用LVS实现负载均衡功能，在选择工作模式时，该工程师不希望LVS服务器修改请求报文的大小，以下哪些工作模式可以满足此需求？",
+    "options": ["A.TUN", "B.RR", "C.DR", "D.NAT"],
+    "correctAnswer": ["C","D"]
+  },
+  {
+    "id": 65,
+    "type": "multiple",
+    "question": "某工程师使用 LVS并选择DR模式实现 Nginx 服务器的负载均衡功能，以下哪几项配置是正确的？",
+    "options": ["A.DIP和RIP配置在不同网段", "B.LVS服务器和 Nginx 均配置VIP，且VIP一致", "C.RIP和VIP配置在同一网段", "D.LVS上VIP的网卡上关闭ARP广播和应答"],
+    "correctAnswer": ["B",  "D"]
+  },
+  {
+    "id": 66,
+    "type": "multiple",
+    "question": "对下图中的信息分析，以下哪些描述是正确的？ [root@cluster-01 ~]# pidstat | grep gluster 10:57:34 AM 0 1156 0.06 0.01 0.00 0.00 0.07 0 glusterd 10:57:34 AM 0 1402 0.00 0.01 0.00 0.00 0.01 2 glusterfsd 10:57:34 AM 0 1431 0.00 0.00 0.00 0.00 0.01 0 glusterfsd 10:57:34 AM 0 1461 0.11 0.01 0.00 0.00 0.12 0 glusterfs",
+    "options": ["A. 该主机至少有3个CPU", "B. glusterfs 消耗了该主机的大量资源", "C. 该节点承载的 glusterfs 卷已被挂载", "D. 有两个gluster brick 运行在该节点上"],
+    "correctAnswer": ["A", "C"]
+  },
+  {
+    "id": 67,
+    "type": "multiple",
+    "question": "某企业使用 Nginx 作为Web服务器，由于近期业务侧所有员工需要经常查看某个实时销售数据，访问量较大，在不增加服务器情况下，以下哪几项能够提高业务访问效率？",
+    "options": ["A. 在 nginx.conf 中配置提高 types_hash_max_size 的值", "B. 在 nginx.conf 中配置 tcp_nodelay 为off", "C. 在 nginx.conf 配置文件中提高 worker_process 的值", "D. 在 nginx.conf 配置文件中提高 worker_connections 的值"],
+    "correctAnswer": ["A", "C", "D"]
+  },
+  {
+    "id": 68,
+    "type": "multiple",
+    "question": "用户在访问网站时收到了 403 的状态码，以下哪些选项是造成该现象的可能原因？",
+    "options": ["A. web 服务器由 Apache 实现，且配置文件中将 Require not ip 设置为该用户的IP地址", "B. web 服务器由 Apache 实现，且开启了 SELinux 和 firewallld 安全措施", "C. web 服务器由 Apache 实现，并使用了 Prefork 模式", "D. web 服务器由 Apache 实现，且配置文件中将 KeepAliveTimeout 设置为 0"],
+    "correctAnswer": ["A", "B"]
+  },
+  {
+    "id": 69,
+    "type": "multiple",
+    "question": "以下关于 Apache 和 Nginx 的区别，描述正确的是哪几项？",
+    "options": ["A. Nginx 相对于 Apache 配置更简洁，静态处理性能更高", "B. Apache 默认使用同步多进程模型，一个连接对应一个进程，而 Nginx 是异步的，多个连接可以对应一个进程", "C. Nginx 相对于 Apache 性能更加稳定", "D. Nginx 相对于 Apache 更轻量，抗并发"],
+    "correctAnswer": ["A", "B", "D"]
+  },
+  {
+    "id": 70,
+    "type": "multiple",
+    "question": "某企业基于 Apache 搭建网站服务，并通过 LVS 提供 VIP 对外提供服务。业务运行一段时间后，发现业务有时无法正常访问。以下哪些选项是造成这种现象的原因？",
+    "options": ["A. 部分 Apache 服务器主配置文件中的主页存放路径错误，导致业务无法正常使用", "B. 环境未安装 Keepalived 类的心跳检查功能，集群中有服务器故障，导致无法访问", "C. Apache 服务使用 Prefork 模式，某一时刻所有服务器子进程占用资源过多，服务器无法正常响应", "D. 集群 LVS 模式为 NAT 模式，未添加所有后端服务器，导致部分服务器无法访问"],
+    "correctAnswer": ["B", "C"]
+  },
+  {
+    "id": 71,
+    "type": "multiple",
+    "question": "某工程师使用 LVS 配置负载均衡时，采用 DR 的工作模式，配置前业务访问正常，但在配置完成后发现转发不正常。以下哪几项是该工程师需要在 RS 上检查的配置？",
+    "options": ["A. 是否配置了 VIP", "B. 是否在 firewall 中放通了对接口", "C. 是否打开了 ip 转发功能", "D. 是否关闭了 arpf 插"],
+    "correctAnswer": ["A",  "D"]
+  },
+  {
+    "id": 72,
+    "type": "multiple",
+    "question": "以下哪几个服务建议配合 Keepalived 实现高可用？",
+    "options": ["A. MySQL", "B. DNS", "C. Apache", "D. LVS"],
+    "correctAnswer": ["C", "D"]
+  },
+  {
+    "id": 73,
+    "type": "multiple",
+    "question": "根据下图中的输出分析，以下哪些选项是正确的？ [root@Nginx1 ~]# ps --forest -c nginx -o pid,ppid,cmd PID PPID CMD 970 1 nginx: master process /usr/sbin/nginx 973 970 nginx: worker process",
+    "options": ["A. 在命令中添加 \"%cpu\" 即可查看到对应进程的 CPU 占用率", "B. 该主机为物理核心数为 1", "C. PID 为 973 的父进程 ID 为 970", "D. 该主机中的 Nginx 用来实现冗余载荷"],
+    "correctAnswer": ["A","B", "C"]
+  },
+  {
+    "id": 74,
+    "type": "multiple",
+    "question": "在搭建 LAMP 集群时，至少需要安装和配置以下哪几种服务？",
+    "options": ["A. GlusterFS", "B. MySQL", "C. Nginx", "D. Apache"],
+    "correctAnswer": ["B", "D"]
+  },
+  {
+    "id": 75,
+    "type": "multiple",
+    "question": "某工程师在 Nginx 的配置文件中添加了以下配置，关于该配置描述正确的是哪几个选项？ upstream image { server 10.0.0.41:82; server 10.0.0.42:82; }",
+    "options": ["A. 客户端访问两台 server 时，目的端口必须是 82", "B. Nginx 为两台 server 提供了负载均衡功能，使用的是默认的轮训加权算法", "C. 配置 server 模块，可实现对两台业务的四层或七层代理", "D. image是固定参数，不可随意更改"],
+    "correctAnswer": [ "B", "C"]
+  },
+  {
+    "id": 76,
+    "type": "multiple",
+    "question": "Apache 和 Nginx 都支持虚拟主机功能，以下哪些选项是二者同时支持的区分不同主机的方式？",
+    "options": ["A. IP地址", "B. 域名", "C. 端口号", "D.MAC地址"],
+    "correctAnswer": ["A", "B", "C"]
+  },
+  {
+    "id": 77,
+    "type": "multiple",
+    "question": "在Zabbix中对一台提供反向代理服务的 Nginx 主机进行监控，以下哪些指标需要重点关注？",
+    "options": ["A. 磁盘IO", "B. 磁盘容量", "C. CPU使用率", "D. 内存使用率"],
+    "correctAnswer": ["C", "D"]
+  },
+  {
+    "id": 78,
+    "type": "multiple",
+    "question": "某工程师使用Ansible在主机中安装Apache时，返回以下报错，哪些选项为造成该报错的可能原因？ 10.0.0.218 | UNREACHABLE!=>{ \"changed\": false, \".………………………\", \"unreachable\":\": true }",
+    "options": ["A. 10.0.0.218 启用了 firewalld 且未放通ssh端口", "B. 10.0.0.218 的 ssh 服务将 PasswordAuthentication 设置为no", "C. 控制主机未配置对 10.0.0.218 的免密登录", "D. 控制主机未开启 sshd 服务"],
+    "correctAnswer": ["A",  "C"]
+  },
+  {
+    "id": 79,
+    "type": "multiple",
+    "question": "某企业采用MySQL管理内部业务数据，工程师在选择数据库连接器时，可以选择以下哪些语言开发的程序？",
+    "options": ["A. PHP", "B. Ruby", "C. JDBC", "D. Python"],
+    "correctAnswer": ["A", "B", "C", "D"]
+  },
+  {
+    "id": 80,
+    "type": "multiple",
+    "question": "某小型企业基于web服务器搭建了文件共享系统，员工可通过浏览器上传或下载部门文件，不同部门之间使用不同的路径来隔离，以下哪些配置可用于该系统的实现？",
+    "options": ["A. <virtualhost *:81> ServerName localhost DocumentRoot \"/department1/\" <Directory \"/department1/\"> AllowOverride None Require all granted <Directory> <virtualhost> <virtualhost *:82> DocumentRoot \"/department2/\" <Directory \"/department2/\"> AllowOverride None Require all granted", "B. --- - hosts: Nginx remote_user: root gather_facts: no tasks: - name: create department1 file: path: /departement1 state: directory - name: create department2 file: path: /departement2 state: directory", "C. frontend main *:80 acl url_deparment1 path_end department1 acl url_deparment2 path_end department2 use_backend department1 if url_deparment1 use_backend department2 if url_deparment2", "D. #!/bin/bash NUM='ls -A /department1|wc -l' if test -e /department1; then if [ $NUM -eq 0]; then rm -rf department1 fi fi"],
+    "correctAnswer": ["A", "B","C"]
+  },
+  {
+    "id": 81,
+    "type": "multiple",
+    "question": "以下关于分布式存储技术的描述和猜测中，合理的是哪些项？",
+    "options": ["A. 元数据服务器限制了存储资源的横向扩展，GlusterFS 具有高可扩展性，因此推测 GlusterFS 没有元数据服务器，属于去中心化架构。", "B. NAS 具备容错性，支持多种方式保护数据完整性，同时具备易于访问的特性，因此推测NAS适用于企业存储和文件共享", "C. 小文件通常指大小在1MB以内的文件，GlusterFS要求预置Brick，因此推测 GlusterFS 比较适合存储小文件", "D. IP SAN基于TCP/IP网络进行数据传输，FC SAN需要专用光纤交换机进行数据传输，因此推测 IP SAN存储的扩展性优于FC SAN存储"],
+    "correctAnswer": ["A", "B"]
+  },
+  {
+    "id": 82,
+    "type": "multiple",
+    "question": "某工程师希望使用 SaltStack 维护公司内部GlusterFS集群，以下操作命令与其功能描述相符的是哪些项？",
+    "options": ["A. 创建分布式复制卷 vol2：salt gluster1 glusterfs.create vol2 \"[\"gluster1:/export/vol2/brick\",gluster2:/export/vol2/brick\"]' replica=2 start=True", "B. 在 host1 上创建新的 brick，并挂载至newvolume：salt '*' glusterfs.add_volume_bricks newvolume host1:/brick", "C. 启动 mycluster 集群：salt '*' glusterfs.start mycluster", "D. 将 host3 添加进入存储信任池：salt 'one.gluster.*' glusterfs.peer host3"],
+    "correctAnswer": ["A", "B","C","D"]
+  },
+  {
+    "id": 83,
+    "type": "multiple",
+    "question": "某大型企业IT环境包含各种服务器和网络设备，该企业要求实现自动化运维，在该场景中工程师可以使用 Ansible管理以下哪些设备？",
+    "options": ["A. openEuler 服务器", "B. Windows Server 2012 R2服务器", "C. 防火墙", "D. 交换机"],
+    "correctAnswer": ["A", "B", "C", "D"]
+  },
+  {
+    "id": 84,
+    "type": "multiple",
+    "question": "某工程师在配置LVS时采用了LVS默认的工作模式，该模式支持以下哪些负载均衡算法？",
+    "options": ["A. 轮询算法", "B. 源地址哈希算法", "C. 最少连接算法", "D. 最短期望延迟算法"],
+    "correctAnswer": ["A", "B", "C","D"]
+  },
+  {
+    "id": 85,
+    "type": "multiple",
+    "question": "关于以下Keepalived配置文件描述正确的是哪几项？ vrrp_instance Nginx ( state BACKUP interface ens3 virtual_router_id 52 priority 200 advert_int 1 authentication { auth_type PASS auth_pass 1111 } virtual_ipaddress { 10.0.0.20/24 } }",
+    "options": ["A. 该配置是为 Nginx 服务器提供主备机制的", "B. 该配置为各服务器的配置，当主服务出现故障后，才可能升级为主服务", "C. 主备服务器的 virtual_router_id 需要保持不同，用以区分不同服务器", "D. 10.0.0.20 是主备服务器的虚拟IP"],
+    "correctAnswer": ["B", "D"]
+  },
+  {
+    "id": 86,
+    "type": "multiple",
+    "question": "Nginx 作为web服务器的反向代理时，会涉及到以下哪些选项的工作步骤？",
+    "options": ["A. 客户端向 Nginx 发送请求", "B. Nginx 在收到客户端发送的请求后，将请求转发到端服务器", "C. 后端服务器直接将资源发送给客户端", "D. Nginx 定期检查后端服务器是否可用"],
+    "correctAnswer": ["A", "B", "D"]
+  },
+  {
+    "id": 87,
+    "type": "multiple",
+    "question": "在openEuler中关闭SSH服务后，以下哪些服务或应用的使用会受影响？",
+    "options": ["A. Ansible", "B. SaltStack", "C. HTTP", "D. Glusterfs"],
+    "correctAnswer": ["A", "B"]
+  },
+  {
+    "id": 88,
+    "type": "multiple",
+    "question": "将内核参数tp_forward设置为0以后，以下哪些服务的功能可能会受影响？",
+    "options": ["A. Nginx", "B. LVS", "C. Keepalived", "D. iptables", "E. firewalld", "F. HAproxy"],
+    "correctAnswer": [ "D", "E"]
+  },
+  {
+    "id": 89,
+    "type": "multiple",
+    "question": "对比Ansible和SaltStack的功能，以下描述哪些是正确的？",
+    "options": ["A. Ansible的service_facts和SaltStack的pillar功能相似", "B. Ansible的yum和SaltStack的pkg功能相似", "C. Ansible的service和SaltStack的service功能相似", "D. Ansible的file和SaltStack的file功能相似"],
+    "correctAnswer": ["B", "C", "D"]
+  },
+  {
+    "id": 90,
+    "type": "multiple",
+    "question": "根据下图信息进行分析，以下哪些选项是正确的？",
+    "options": ["A. 10.0.0.20/wp 是由Glusterfs提供的卷", "B. 10.0.0.20/wp 会开机自动挂载到/data/wp目录", "C. 10.0.0.20/wp 在被挂载时选用的是默认参数", "D. 10.0.0.20/wp 可以通过nfs的方式挂载，但要求客户端支持并开启NFS v4"],
+    "correctAnswer": ["A", "C"]
+  },
+  {
+    "id": 91,
+    "type": "multiple",
+    "question": "某工程师在使用ansible playbook配置完成Keepalived后，发现集群中的所有主机都获取到了指定的VIP，查看日志后发现所有主机都首先将自己置为BACKUP，在未收到VIP消息通知后将自己升级为MASTER，并自动配置了VIP，以下哪些选项是造成这种现象的可能原因？",
+    "options": ["A. VIP使用变量指定，但未生效", "B. keepalived的配置文件未使用in2模板，导致变量未生效", "C. 在playbook中未对firewall进行配置", "D. 配置文件中未包含real_server相关配置", "E. 配置文件中未指定MASTER节点"],
+    "correctAnswer": ["C", "E"]
+  },
+  {
+    "id": 92,
+    "type": "fill",
+    "question": "A-Ops 包含多个组件，每个组件实现对应的功能，用户可根据自己的需求选择安装，其中需要部署在客户端组件是___.",
+    "answer": "aops-ceres",
+    "points": 16,
+    "correctAnswer": ["aops-ceres"]
+  },
+  {
+    "id": 93,
+    "type": "fill",
+    "question": "（Keepalived）起初是为LVS设计的，专门用来监控集群系统中各个服务节点的状态，两者搭配可以实现负载均衡和高可用。",
+    "answer": "Keepalived",
+    "points": 16,
+    "correctAnswer": ["Keepalived"]
+  },
+  {
+    "id": 94,
+    "type": "fill",
+    "question": "下图是（正向）代理的示意图。",
+    "answer": "正向",
+    "points": 16,
+    "correctAnswer": ["正向"]
+  },
+  {
+    "id": 95,
+    "type": "fill",
+    "question": "某LAMP架构的应用对浏览器类型有严格的要求，如果不满足就无法正常访问。管理员在该应用的前端使用（HAProx）来实现上层代理，将相关类型浏览器的请求转发至对应服务器，不符合要求的请求则响应为根据并提示安装正确浏览器的页面。",
+    "answer": "HAProxy",
+    "points": 16,
+    "correctAnswer": ["HAProxy"]
+  },
+  {
+    "id": 96,
+    "type": "fill",
+    "question": "使用 Glusterfs 创建一个分布式复制卷，该卷由12块Bricks组成，创建命令为： gluster volume create gv3 node2:/ex/brick2 node1:/ex/brick1 node3:/ex/brick1 node1:/ex/brick2 node4:/ex/brick3 node2:/ex/brick1 node1:/ex/brick3 node3:/ex/brick2 node4:/ex/brick1 node4:/ex/brick2 node2:/ex/brick3 node3:/ex/brick3 客户端Client挂载该卷后，保存了多个文件在卷中，其中发现file1保存在node1:/ex/brick3中，那么根据 Glusterfs的工作原理file1的另一副本保存在（node2:/ex/brick2）中。",
+    "answer": "node2:/ex/brick2",
+    "points": 16,
+    "correctAnswer": ["node2:/ex/brick2"]
+  }
+,
+  {
+    "id": 97,
+    "type": "single",
+    "question": "在比较集中式存储和分布式存储的优缺点时，以下哪项关于这两种存储架构的描述是正确的？",
+    "options": ["A. 分布式存储能够通过冗余和复制机制提高数据的高可用性和容错性，但同时增加了系统的管理复杂性和网络带宽的消耗", "B. 分布式存储通过将数据分散存储在多个节点上来提高系统的可扩展性，但相应地也面临更复杂的管理和数据一致性问题", "C. 集中式存储适合大规模企业应用，能够提供高性能和低延迟，而分布式存储更适合小型企业或单一应用", "D. 集中式存储提供比分布式存储更高的容错能力，因为所有数据都集中存储在一个单一的存储节点中，易于管理和备份"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 98,
+    "type": "single",
+    "question": "在以下四个代码片段中，哪个可以正确判断变量num是否是一个大于100的整数？",
+    "options": ["A. if test num -gt 100; then echo \"Greater than 100\"; fi", "B. if test -gt 100 $num; then echo \"Greater than 100\"; fi", "C. if test \"$num\" -gt 100; then echo \"Greater than 100\"; fi", "D. if test \"$num\" -gt \"100\"; then echo \"Greater than 100\"; fi"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 99,
+    "type": "single",
+    "question": "以下关于网络相关内存参数的描述，哪个是正确的？",
+    "options": ["A. rp_filter：源路由信息指明了数据包的传输路径", "B. icmp_echo_jgnore_broadcasts：避免ICMP放大攻击，占用目标系统的可用带宽并导致合法通信的服务被拒绝", "C. ip_forward：单网卡中多个IP地址配置", "D. accept_source_route：在一个网卡收到数据包后，把源地址和目标地址对调后查找反向路由出口，再根据反向路由出口来过滤数据包"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 100,
+    "type": "single",
+    "question": "使用free命令查看系统内存时，输出中“buffers”和“cached”列的含义为以下哪个选项？",
+    "options": ["A. “buffers”和“cached”都表示内存中的数据缓存区域，“buffers”用于存储文件系统的元数据缓存，“cached”用于存储文件内容缓存，二者都计入可用内存（free）", "B. “buffers”表示内存中用于缓存程序数据的区域，“cached”用于缓存网络数据，二者都不计入可用内存", "C. “buffers”表示内核缓冲区的内存，用于存储正在执行的程序的代码，“cached”表示文件系统缓存，用于缓存文件内容，二者可以计入内存使用量", "D. “buffers”表示磁盘缓冲区的内存，用于缓存文件系统的元数据，“cached”表示应用程序缓存，用于缓存程序数据，二者计入内存使用量"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 101,
+    "type": "single",
+    "question": "以下哪些场景可以使用自动化运维工具Ansible来实施？",
+    "options": ["A. 在一个分布式大数据平台中，管理集群节点的实时状态和执行远程命令，需要较高的实时性和低延迟", "B. 在一个高频繁变化的生产环境中，管理多个微服务并确保它们之间的依赖关系和配置保持一致", "C. 在一个由多个数据中心组成的全球化企业环境中，确保不同地区的服务器和服务配置在短时间内快速同步和部署", "D. 管理一个由数千台服务器组成的大规模基础设施，需要确保所有服务器的配置文件、服务状态、以及安全设置始终一致"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 102,
+    "type": "single",
+    "question": "以下哪个选项是下面代码的计算结果？ #!/bin/bash result=0 for i in {1..3}; do if (( '%2 ==0) ); then result=$((result + i * i)) else result=$((result + i)) fi done echo \"The final result is: $result\"",
+    "options": ["A. 10", "B. 8", "C. 6", "D. 12"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 103,
+    "type": "single",
+    "question": "运行以下代码，最后结果为以下哪个选项？ #!/bin/bash result=0 for i in {1..3}; do for j in {1..3}; do result=$((result + i * j)) done done echo \"最终结果是: $result\"",
+    "options": ["A. 18", "B. 6", "C. 36", "D. 45"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 104,
+    "type": "single",
+    "question": "在openEuler中，以下哪个命令最适合用于查找文件log.txt中包含字符串ERROR，并同时输出该字符串前后各两行的内容？",
+    "options": ["A. grep 'ERROR' log.txt -A 2 -B 2", "B. grep -C 2 'ERROR' log.txt", "C. grep 'ERROR' -C 2 log.txt", "D. grep -AB 2 'ERROR' log.txt"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 105,
+    "type": "single",
+    "question": "在配置SELinux时，以下哪个场景最能体现SELinux的强制访问控制(MAC)功能，并且是SELinux在实际运维中常见的应用场景？",
+    "options": ["A. 防止某些进程（如Apache）访问敏感目录（如/etc/passwd），即使该进程运行的用户具有该文件的读取权限", "B. 限制仅允许指定用户通过SSH登录系统，而其他用户即使拥有正确的SSH密钥也无法登录", "C. 限制某个用户只能在指定目录下创建文件，并且只能通过scp命令上传文件，而无法通过其他方式上传", "D. 配置防火墙规则，仅允许来自特定IP地址的流量访问指定端口"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 106,
+    "type": "single",
+    "question": "在使用LVS配置负载均衡的场景中，以下关于LVS-DR（Direct Routing）模式的描述中，哪一项是正确的？",
+    "options": ["A. LVS-DR模式支持跨网段的负载均衡，因为其转发方式与LVS-TUN类似", "B. LVS-DR模式中，负载均衡器和端服务器之间的通信依赖于隧道协议(如IPIP)", "C. LVS-DR模式要求后端服务器的网卡绑定VIP(虚拟IP)，但不能再该网卡中启用ARP广播及响应，否则可能导致VIP冲突", "D. LVS-DR模式中，负载均衡器需要同时修改数据包的源IP和目标MAC地址才能正确转发流量"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 107,
+    "type": "single",
+    "question": "以下为log.txt文件的内容： 1  2023-12-12 INFO User logged in: Alice 2  2023-12-13 ERROR Failed login attempt: Bob 3  2023-12-13 INFO User logged out: Alice 4  2023-12-13 ERROR System timeout: Carol 5  2023-12-14 INFO User logged in: Dave 管理员需要提取所有发生在2023-12-13的ERROR类型日志中的用户(最后一列)，并以逗号分隔它们(例如BCarol)。以下哪个命令能够实现此需求？",
+    "options": ["A. sed -n '/2023-12-13.*ERROR/s/*:/p' log.txt | tr '\\n' ', '| awk \"s/,$//\"", "B. grep \"2023-12-13.*ERROR\" log.txt | awk '(print $NF)' | paste-sd \", \"", "C. awk '/2023-12-13.*ERROR/ {printf \"%s\", $NF}' log.txt | awk 's/,$//'", "D. grep \"2023-12-13.*ERROR\" log.txt | sed -n 's/.*:/p' | awk -v ORS=\",\" \"1;END {print \"'}' | grep 's/,$//'"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 108,
+    "type": "single",
+    "question": "以下哪一项是firewalld 相对于iptables 的主要优势？",
+    "options": ["A. firewalld通过区域（Zone）概念提供了更加灵活和易于管理的流量控制策略，支持动态修改规则并在不断现有连接的情况下应用新策略", "B. firewalld使用静态规则和手动配置的方式，比iptables更加灵活，适合高度定制化的防火墙需求", "C. firewalld 支持通过命令行和图形界面同时管理防火墙规则，而iptables 仅支持命令行管理", "D. firewalld使用基于规则的模型，而iptables使用基于状态的模型，因此firewalld更适合进行状态跟踪和动态防火墙管理"],
+    "correctAnswer": ["A"]
+  },
+  {
+    "id": 109,
+    "type": "single",
+    "question": "在Zabbix中，关于自动发现(Auto Discovery)功能的描述，哪个选项是正确的？",
+    "options": ["A. 自动发现功能需要在主机上安装Zabbix Agent才能工作", "B. 自动发现只能用于发现网络设备，并不能用于主机发现", "C. 自动发现功能依赖于Zabbix Server或Proxy定期扫描网络来识别新设备，并自动添加到Zabbix监控系统中", "D. 自动发现只会发现网络设备的IP地址，不会发现其操作系统或硬件信息"],
+    "correctAnswer": ["C"]
+  },
+  {
+    "id": 110,
+    "type": "single",
+    "question": "如果一家公司想要在其内部网络中搭建一个高可用性的WordPress展示页面，且已决定使用MySQL作为后台数据库，那么为了实现高可用性，应该如何部署MYSQL数据库？",
+    "options": ["A. 两台数据库服务器分离部署，一台为主，一台为冷备", "B. 使用主备集群部署MySQL，以保证数据的高可用性", "C. 两台数据库服务器以实现负载均衡", "D. 限制数据库访问，只允许本地网络地址访问"],
+    "correctAnswer": ["B"]
+  },
+  {
+    "id": 111,
+    "type": "single",
+    "question": "你是一名系统管理员，负责管理一个由Nginx、LVS和Keepalive集群构成的网络架构。这个网络架构的主要用途是什么？",
+    "options": ["A. 提供可靠文件存储", "B. 保证数据库运行正常", "C. 提供静态网页服务", "D. 实现负载均衡和高可用性"],
+    "correctAnswer": ["D"]
+  },
+  {
+    "id": 112,
+    "type": "multiple",
+    "question": "以下关于Apache配置的描述，哪些是正确的？",
+    "options": ["A. 使用mod_deflate模块可以对传输的内容进行压缩，减少网络传输流量，提升用户访问速度，且可以对特定的文件类型进行单独设置压缩与否", "B. mod_expires模块可以设置资源的缓存过期时间，以便客户端更好地利用缓存，减少服务器负载", "C. Apache的日志文件可以通过配置文件中的相关指令进行详细的定制，包括记录的信息内容和存储位置等", "D. 在Apache的配置文件中，通过设置ServerName指令可以指定服务器的主机名和端口号，若不设置该指令，服务器将无法正常启动"],
+    "correctAnswer": ["A", "B", "C"]
+  },
+  {
+    "id": 113,
+    "type": "multiple",
+    "question": "在使用LVS配置负载均衡时，下列关于LVS的调度算法和模式的描述中，哪些是正确的？",
+    "options": ["A. LVS-DR模式的核心特点是负载均衡需要同时修改数据包的目标MAC地址和源IP地址以完成转发", "B. 哈希调度算法（SH)是通过哈希源IP地址和目标端口号来实现会话保持的", "C. LVS-NAT模式中，负载均衡器对所有入站和出站流量都进行地址转换，因此对负载均衡器的性能要求较高", "D. 加权轮询调度算法（WRR）适合后端服务器性能差异较大的场景，因为它可以根据权重分配请求"],
+    "correctAnswer": ["B", "C", "D"]
+  },
+  {
+    "id": 114,
+    "type": "multiple",
+    "question": "通过ansible基于LNMP安装zabbix时，在zabbix服务端对应的playbook中需配置以下哪些任务？",
+    "options": ["A. -name: install zabbix-agent2 yum: name: zabbix-agent2 state: present", "B. - name: install nginx yum: name: nginx state: present", "C. - name: config port of php linenfile: path: /etc/php-fpm.d/www.conf insertafter: \"listen.allowed_clients=127.0.0.1*\" line: \"listen=9000\"", "D. - name: install php yum: name: php state: present"],
+    "correctAnswer": ["A", "C", "D"]
+  },
+  {
+    "id": 115,
+    "type": "multiple",
+    "question": "Ansible的command模块用于在目标主机上执行命令。以下关于command模块的描述中，哪些是正确的？",
+    "options": ["A. command模块在执行时不会对命令输出进行任何处理或解析，所有输出都原样返回给Ansible控制台", "B. 如果需要在目标主机上执行的命令包含多个参数或复杂的执行逻辑(如条件判断)，应使用shell模块，而非command模块", "C. command 模块不支持通过 shell 来执行命令，因此无法使用管道()、重定向（>）等shell特性", "D. command模块总是通过SSH协议将命令发送到目标主机，且每次执行命令时都会启动一个新的SSH会话"],
+    "correctAnswer": ["A", "B", "C"]
+  },
+  {
+    "id": 116,
+    "type": "multiple",
+    "question": "在SELinux中，日志记录是非查安全问题和监控系统行为的重要手段。以下哪些选项正确描述了SELinux日志的使用和配置？",
+    "options": ["A. 使用auditZallow工具可以分析SELinux日志并生成相应的策略，帮助管理员创建自定义策略来解决权限问题", "B. SELinux日志的默认配置仅记录与文件访问相关的事件，忽略进程间通信和网络访问的拒绝事件", "C. SELinux 会将所有拒绝的访问尝试（denials）记录到/var/log/audit/auditlog文件中，供管理员进行审计和分析", "D. SELinux 日志记录是通过 semanage 命令配置的，semanage 可以用来指定哪些进程或资源应记录日志"],
+    "correctAnswer": ["A", "C"]
+  },
+  {
+    "id": 117,
+    "type": "multiple",
+    "question": "某工程师在进行HAProxy测试，他在未修改global和default的情况下将frontend和backend修改为以下内容： frontend main bind *:8080 ac1 web1 path_end -i.png .gif jpg use_backend pic if web1 ac1 web2 urlreg -i\\.txt$ use_backend txt if web2 default_backend http_back backend pic balance roundrobin server node1 127.0.0.1:81 check backend txt balance roundrobin server node2 127.0.0.1:82 check backend http_back balance roundrobin server node3 127.0.0.1:83 check 之后重启服务，并确认了服务已正常，然后使用浏览器对\"192.168.1.100:8080/test.txt\"进行访问，其中192.168.1.100为haproxy的IP地址，浏览器收到下图信息。 404 Not Found nginx/1.21.5 结合以上全部信息进行分析，以下哪些是正确的选项？",
+    "options": ["A. 三台web服务器通过nginx的虚拟主机提供", "B. node1主机的Root目录中不存在任何以png、git或者jpg为后缀名的文件", "C. 链接\"192.168.1.100:8080/test.txt\"的请求由127.0.0.1:82的web服务器响应"],
+    "correctAnswer": ["B", "C"]
+  },
+  {
+    "id": 118,
+    "type": "multiple",
+    "question": "在GlusterFS中，分布式卷是一种常用的卷类型，其数据保存流程决定了文件如何分配到不同的brick上。以下关于GlusterFS分布式卷数据保存流程的描述中，哪些是正确的？",
+    "options": ["A. 分布式卷的每个brick必须位于不同的服务器上，以确保数据冗余和高可用性", "B. 如果分布式卷中的某个brick不可用，存储在该brick上的文件会被自动迁移到其他可用brick上", "C. 文件存储时，GlusterFS的客户端通过卷信息(volume file)了解卷的结构，并决定将文件写入哪个brick", "D. 文件在分布式卷中是根据文件名的哈希值分布到不同的brick上，每个文件只存储在单个brick上"],
+    "correctAnswer": ["C", "D"]
+  },
+  {
+    "id": 119,
+    "type": "multiple",
+    "question": "以下关于SaltStack远程执行功能的描述，哪些是正确的？",
+    "options": ["A. salt命令用于从master节点向多个minions同时执行命令", "B. salt-call命令用于在minion上本地执行命令和模块，但不支持与master通信", "C. 使用salt-ssh可以在没有安装SaltStack代理(minion)的主机上执行远程命令", "D. salt-run命令主要用于从master节点执行计划任务，支持定时和周期性执行任务"],
+    "correctAnswer": ["A", "B", "D"]
+  },
+  {
+    "id": 120,
+    "type": "multiple",
+    "question": "关于Shell脚本中函数的使用，下列选项哪些是正确的？",
+    "options": ["A. 在一个Shell脚本中，可以在函数内调用另一个函数", "B. 函数中定义的变量默认是全局的，除非用local关键字定义", "C. Shell函数中不能使用local关键字定义局部变量", "D. 函数执行完毕后，返回值可以直接通过变量$获取"],
+    "correctAnswer": ["A", "B", "D"]
+  },
+  {
+    "id": 121,
+    "type": "multiple",
+    "question": "以下为某日志文件logfile.txt的内容： 1  2024-12-01 12:01:30, INFO, User admin logged in. 2  2024-12-01 12:05:45, ERROR, Failed to connect to database. 3  2024-12-01 12:10:02, INFO, User admin performed action X. 4  2024-12-02 14:15:30, ERROR, Unable to find file:config.txt. 5  2024-12-02 15:01:01, WARN, Disk space running low. 6  2024-12-03 09:05:13, INFO, User guest logged in. 7  2024-12-03 09:10:45, ERROR, Connection timeout to server. 8  2024-12-03 09:15:25, INFO, User guest preformed action Y. 9  2024-12-04 10:25:50, ERROR, Failed to read log file. 10  2024-12-04 10:30:00, WARN, Disk space running low. 使用grep对该文件进行内容查找，以下哪些选项是正确的？",
+    "options": ["A. 使用 grep 'Disk space running low' logfile.txt|grep -v '2024-12-04' 查找所有包含\"Disk space running low\"的记录，但排除掉日期为\"2024-12-04\"的记录", "B. 使用 grep -v '2024-12-02.*ERROR' logfile.txt 查找所有日期为\"2024-12-02\"且包含\"ERROR\"的记录", "C. 使用 grep '2024-12-02.*ERROR' logfile.txt 查找所有日期为\"2024-12-02\"且包含\"ERROR\"的记录", "D. 使用 grep '2024-12-01' logfile.txt | grep -o '[A-Z]*' 查找所有日期为\"2024-12-01\"的记录，并仅显示日志级别"],
+    "correctAnswer": ["A", "C"]
+  },
+  {
+    "id": 122,
+    "type": "judge",
+    "question": "随着技术的进步，应用对后端存储架构的要求也在变化，因此存储架构从最初的服务器自带本地存储发展到服务器直接外部存储，然后发展到集中式存储，最后发展到现在的分布式存储。现在除了分布式存储，其他架构以及彻底退出了历史舞台。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 123,
+    "type": "judge",
+    "question": "[ -f \"fi1e.txt\" ] 可用于检查 file.txt 是否存在且是一个普通文件。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 124,
+    "type": "judge",
+    "question": "通过\"Ctrl+Alt+Del\"重启系统是所有操作系统必须具备的基本操作，无法通过修改配置来禁用此操作。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 125,
+    "type": "judge",
+    "question": "在LNMP 环境中部署WordPress时，必须首先安装并配置好Nginx作为Web服务器，MySQL作为数据库服务器，并确保它们都已正确运行，然后才能安装PHP及其扩展。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 126,
+    "type": "judge",
+    "question": "firewall使用的区域（Zone）是基于IP地址和接口的。每个区域都定义了一组规则，并且可以针对不同的网络接口分配不同的区域，以实现细粒度的流量控制。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["正确"]
+  },
+  {
+    "id": 127,
+    "type": "judge",
+    "question": "Zabbix 提供的外部检查（External Check)功能支持直接从Zabbix Server或Zabbix Proxy上运行自定义脚本，并通过该脚本的输出结果作为监控项的值。但外部检查不支持在代理模式下与ZabbixServer通信。",
+    "options": ["正确", "错误"],
+    "correctAnswer": ["错误"]
+  },
+  {
+    "id": 128,
+    "type": "fill",
+    "question": "按照shell脚本中的提示补充完整该脚本。 #!/bin/bash # 检查输入参数数量是否足够 if [ ___, -lt 2 ]; then echo \"用法：$0 <数字1> <数字2>\" exit 1 fi",
+    "answer": "$#",
+    "points": 16,
+    "correctAnswer": ["$#"]
+  }
+]
