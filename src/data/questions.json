@@ -821,7 +821,7 @@
     "id": 117,
     "type": "multiple",
     "question": "某工程师在进行HAProxy测试，他在未修改global和default的情况下将frontend和backend修改为以下内容： frontend main bind *:8080 ac1 web1 path_end -i.png .gif jpg use_backend pic if web1 ac1 web2 urlreg -i\\.txt$ use_backend txt if web2 default_backend http_back backend pic balance roundrobin server node1 127.0.0.1:81 check backend txt balance roundrobin server node2 127.0.0.1:82 check backend http_back balance roundrobin server node3 127.0.0.1:83 check 之后重启服务，并确认了服务已正常，然后使用浏览器对\"192.168.1.100:8080/test.txt\"进行访问，其中192.168.1.100为haproxy的IP地址，浏览器收到下图信息。 404 Not Found nginx/1.21.5 结合以上全部信息进行分析，以下哪些是正确的选项？",
-    "options": ["A. 三台web服务器通过nginx的虚拟主机提供", "B. node1主机的Root目录中不存在任何以png、git或者jpg为后缀名的文件", "C. 链接\"192.168.1.100:8080/test.txt\"的请求由127.0.0.1:82的web服务器响应"],
+    "options": ["A. 三台web服务器通过nginx的虚拟主机提供", "B. node1主机的Root目录中不存在任何以png、git或者jpg为后缀名的文件", "C. 链接\"192.168.1.100:8080/test.txt\"的请求由127.0.0.1:82的web服务器响应","D.三台主机会轮流响应由HAProxy转发来的请求"],
     "correctAnswer": ["B", "C"]
   },
   {
