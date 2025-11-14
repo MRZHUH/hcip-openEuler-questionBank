@@ -143,13 +143,13 @@ const ExamApp = () => {
   const progress = ((currentQuestion + 1) / filteredQuestions.length) * 100
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 px-3 py-4 sm:p-6">
       <div className="max-w-4xl mx-auto">
-        <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-8 mb-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight mb-2">HCIP-openEuler 刷题系统</h1>
-          <p className="text-gray-600">H12-623-CHS (winback考试) V1.0</p>
+        <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-4 sm:p-8 mb-8">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight mb-2">HCIP-openEuler 刷题系统</h1>
+          <p className="text-gray-600 text-sm sm:text-base">H12-623-CHS (winback考试) V1.0</p>
 
-          <div className="flex items-center gap-2 mt-6 flex-wrap">
+          <div className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-6 flex-wrap">
             <button
               onClick={() => {
                 setFilterType('all')
@@ -217,23 +217,37 @@ const ExamApp = () => {
             </button>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-4 sm:mt-6">
             <div className="flex justify-between text-sm text-gray-600 mb-2">
               <span>
                 进度: {currentQuestion + 1} / {filteredQuestions.length}
               </span>
               <span>{progress.toFixed(0)}%</span>
             </div>
-            <div className="w-full bg-gray-200/70 rounded-full h-3 overflow-hidden">
+            <div className="text-xs text-gray-500 mb-1">提示：可拖动切换题目</div>
+            <div className="relative w-full bg-gray-200/70 rounded-full h-2 sm:h-3 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
               ></div>
+              <input
+                type="range"
+                min={1}
+                max={filteredQuestions.length}
+                step={1}
+                value={currentQuestion + 1}
+                onChange={(e) => {
+                  const idx = Number(e.target.value) - 1
+                  setCurrentQuestion(idx)
+                  setShowResult(false)
+                }}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              />
             </div>
           </div>
         </div>
 
-        <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-8 mb-8">
+        <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-4 sm:p-8 mb-8">
           <div className="mb-4">
             <span
               className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
@@ -262,12 +276,12 @@ const ExamApp = () => {
             )}
           </div>
 
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6 leading-relaxed">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-relaxed">
             {currentQ.question}
           </h2>
 
           {currentQ.type !== 'fill' && (
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {currentQ.options.map((option: string, index: number) => {
                 const optionLetter = option.match(/^[A-Z]\./) ? option.charAt(0) : option
                 const isSelected = currentAnswers.includes(optionLetter)
@@ -298,12 +312,12 @@ const ExamApp = () => {
                     key={index}
                     onClick={() => !showResult && handleAnswer(optionLetter)}
                     disabled={showResult}
-                    className={`group w-full p-4 rounded-xl border-2 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${bgColor} ${borderColor} ${textColor} ${
+                    className={`group w-full p-3 sm:p-4 rounded-xl border-2 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${bgColor} ${borderColor} ${textColor} ${
                       !showResult ? 'cursor-pointer' : 'cursor-default'
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-medium">{option}</span>
+                      <span className="font-medium text-sm sm:text-base">{option}</span>
                       {showResult && isCorrect && <Check className="text-green-600" size={20} />}
                       {showResult && isSelected && !isCorrect && (
                         <X className="text-red-600" size={20} />
@@ -323,7 +337,7 @@ const ExamApp = () => {
                 onChange={(e) => !showResult && handleFillAnswer(e.target.value)}
                 disabled={showResult}
                 placeholder="请输入答案..."
-                className="w-full p-4 border-2 border-gray-300 rounded-lg bg-white/90 focus:border-indigo-500 focus:outline-none text-lg shadow-sm"
+                className="w-full p-3 sm:p-4 border-2 border-gray-300 rounded-lg bg-white/90 focus:border-indigo-500 focus:outline-none text-base sm:text-lg shadow-sm"
               />
               {currentQ.answer && (
                 <p className="text-sm text-gray-600">
@@ -362,7 +376,7 @@ const ExamApp = () => {
             </div>
           )}
 
-          <div className="flex gap-3 mt-6">
+          <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-6">
             <button
               onClick={prevQuestion}
               disabled={currentQuestion === 0}
@@ -375,7 +389,7 @@ const ExamApp = () => {
             <button
               onClick={showResult ? nextQuestion : submitAnswer}
               disabled={(!showResult && currentAnswers.length === 0) || (showResult && currentQuestion === filteredQuestions.length - 1)}
-              className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+              className="w-full sm:flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
             >
               {showResult ? '下一题' : '提交答案'}
             </button>
@@ -399,25 +413,25 @@ const ExamApp = () => {
           </div>
         </div>
 
-        <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-6">
+        <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-4 sm:p-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">答题统计</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             <div className="text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">{Object.keys(selectedAnswers).length}</div>
+              <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">{Object.keys(selectedAnswers).length}</div>
               <div className="text-sm text-gray-600">已答题数</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">{calculateScore()}</div>
+              <div className="text-xl sm:text-2xl font-bold text-green-600">{calculateScore()}</div>
               <div className="text-sm text-gray-600">正确题数</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-orange-600">
+              <div className="text-xl sm:text-2xl font-bold text-orange-600">
                 {filteredQuestions.length - Object.keys(selectedAnswers).length}
               </div>
               <div className="text-sm text-gray-600">未答题数</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">
+              <div className="text-xl sm:text-2xl font-bold text-purple-600">
                 {Object.keys(selectedAnswers).length > 0
                   ? ((calculateScore() / Object.keys(selectedAnswers).length) * 100).toFixed(1)
                   : 0}%
