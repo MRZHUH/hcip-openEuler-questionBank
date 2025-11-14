@@ -611,7 +611,7 @@
   {
     "id": 88,
     "type": "multiple",
-    "question": "将内核参数tp_forward设置为0以后，以下哪些服务的功能可能会受影响？",
+    "question": "将内核参数ip_forward设置为0以后，以下哪些服务的功能可能会受影响？",
     "options": ["A. Nginx", "B. LVS", "C. Keepalived", "D. iptables", "E. firewalld", "F. HAproxy"],
     "correctAnswer": [ "D", "E"]
   },

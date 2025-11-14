@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Check, X, ChevronRight, ChevronLeft, RotateCcw } from 'lucide-react'
 import defaultQuestions from '../data/questions.json'
+import { addWrong } from '../utils/wrongBook'
 
 type Q = any
 
@@ -17,7 +18,7 @@ function sample<T>(arr: T[], n: number): T[] {
 }
 
 const RandomExam = (props: { questions?: any[]; themeColor?: 'indigo' | 'green'; title?: string }) => {
-  const { questions: propQuestions, title } = props
+  const { questions: propQuestions, title, themeColor = 'indigo' } = props
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string[]>>({})
   const [showResult, setShowResult] = useState(false)
@@ -97,6 +98,10 @@ const RandomExam = (props: { questions?: any[]; themeColor?: 'indigo' | 'green';
         userAnswer.length === correctAnswer.length &&
         userAnswer.every((a: string) => correctAnswer.includes(a)) &&
         correctAnswer.every((a: string) => userAnswer.includes(a))
+    }
+    if (!isCorrect && userAnswer.length > 0) {
+      const source = themeColor === 'green' ? 'opengauss' : 'openeuler'
+      addWrong(source, Number(currentQ.id))
     }
     if (isCorrect && currentQuestion < filteredQuestions.length - 1) {
       setTimeout(() => {

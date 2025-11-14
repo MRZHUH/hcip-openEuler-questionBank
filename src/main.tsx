@@ -9,6 +9,9 @@ import RandomExam from './pages/RandomExam'
 import Practice from './pages/Practice'
 import Selection from './pages/Selection'
 import { OpenGaussExam, OpenGaussPractice, OpenGaussRandomExam } from './pages/OpenGaussPages'
+import WrongBookFloat from './components/WrongBookFloat'
+import WrongBook from './pages/WrongBook'
+import { OpenGaussWrongBook } from './pages/OpenGaussPages'
 
 const Stars = () => {
   const [count, setCount] = useState<number | null>(null)
@@ -115,14 +118,17 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HashRouter>
       <Navigation />
+      <WrongBookFloat />
       <Routes>
         <Route path="/" element={<Selection />} />
         <Route path="/openeuler" element={<App />} />
         <Route path="/openeuler/random" element={<RandomExam />} />
         <Route path="/openeuler/practice" element={<Practice />} />
+        <Route path="/openeuler/wrong" element={<WrongBook />} />
         <Route path="/opengauss" element={<OpenGaussExam />} />
         <Route path="/opengauss/random" element={<OpenGaussRandomExam />} />
         <Route path="/opengauss/practice" element={<OpenGaussPractice />} />
+        <Route path="/opengauss/wrong" element={<OpenGaussWrongBook />} />
       </Routes>
     </HashRouter>
     <SpeedInsights />

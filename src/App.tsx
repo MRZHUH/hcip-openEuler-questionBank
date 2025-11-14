@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Check, X, ChevronRight, ChevronLeft, RotateCcw } from 'lucide-react'
 import questions from './data/questions.json'
+import { addWrong } from './utils/wrongBook'
 
 interface ExamAppProps {
   questions?: any[]
@@ -125,6 +126,10 @@ const ExamApp = ({
         userAnswer.length === correctAnswer.length &&
         userAnswer.every((a) => correctAnswer.includes(a)) &&
         correctAnswer.every((a: string) => userAnswer.includes(a))
+    }
+    if (!isCorrect && userAnswer.length > 0) {
+      const source = themeColor === 'green' ? 'opengauss' : 'openeuler'
+      addWrong(source, Number(currentQ.id))
     }
     if (isCorrect && currentQuestion < filteredQuestions.length - 1) {
       setTimeout(() => {

@@ -3,6 +3,7 @@ import ExamApp from '../App'
 import Practice from './Practice'
 import RandomExam from './RandomExam'
 import questionsOpenGauss from '../data/questions-openGauss.json'
+import WrongBook from './WrongBook'
 
 
 export const OpenGaussExam = () => {
@@ -32,6 +33,16 @@ export const OpenGaussRandomExam = () => {
       questions={questionsOpenGauss}
       themeColor="green"
       title="随机出题模式 - openGauss"
+    />
+  )
+}
+
+export const OpenGaussWrongBook = () => {
+  return (
+    <WrongBook
+      questions={questionsOpenGauss}
+      themeColor="green"
+      title="错题本 - openGauss"
     />
   )
 }
