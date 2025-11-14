@@ -276,7 +276,7 @@ const ExamApp = () => {
             )}
           </div>
 
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-relaxed">
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-5 leading-relaxed">
             {currentQ.question}
           </h2>
 

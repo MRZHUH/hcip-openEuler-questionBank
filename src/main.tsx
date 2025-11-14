@@ -39,7 +39,7 @@ createRoot(document.getElementById('root')!).render(
                 : 'px-3 py-1 rounded-md bg-white text-indigo-700 border border-indigo-300 hover:bg-indigo-50 text-sm sm:text-base'
             }
           >
-            刷题
+            背题
           </NavLink>
         </div>
       </div>

@@ -190,7 +190,7 @@ const RandomExam = () => {
               <span className="ml-2 text-gray-500">第 {currentQuestion + 1} 题</span>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-relaxed">{currentQ.question}</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-5 leading-relaxed">{currentQ.question}</h2>
 
             {currentQ.type !== 'fill' && (
               <div className="space-y-2 sm:space-y-3">

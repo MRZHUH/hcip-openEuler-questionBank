@@ -63,19 +63,19 @@ const Practice = () => {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 px-3 py-4 sm:p-6">
       <div className="max-w-4xl mx-auto">
         <div className="backdrop-blur-xl bg-white/70 rounded-2xl shadow-soft border border-white/20 p-4 sm:p-8 mb-8">
-          <h1 className="text-xl sm:text-2xl font-extrabold text-gray-800 tracking-tight">刷题模式</h1>
+          <h1 className="text-xl sm:text-2xl font-extrabold text-gray-800 tracking-tight">背题模式</h1>
           <div className="mt-4 flex items-center gap-2 sm:gap-3 flex-wrap">
             <button
               onClick={() => { setMode('sequential'); setCurrentQuestion(0); setShowAnswer(false) }}
               className={`px-3 py-1.5 rounded-full font-medium transition-all text-sm sm:text-base ${mode === 'sequential' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'}`}
             >
-              顺序刷题
+              顺序背题
             </button>
             <button
               onClick={() => { setMode('random'); setCurrentQuestion(0); setShowAnswer(false) }}
               className={`px-3 py-1.5 rounded-full font-medium transition-all text-sm sm:text-base ${mode === 'random' ? 'bg-indigo-600 text-white shadow-sm' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'}`}
             >
-              随机刷题
+              随机背题
             </button>
           </div>
 
@@ -114,7 +114,7 @@ const Practice = () => {
               {currentQ.label && (<span className="ml-2 inline-block px-2 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-800">{currentQ.label}</span>)}
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-relaxed">{currentQ.question}</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-5 leading-relaxed">{currentQ.question}</h2>
 
             {currentQ.type !== 'fill' && (
               <div className="space-y-2 sm:space-y-3">
