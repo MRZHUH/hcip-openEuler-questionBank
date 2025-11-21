@@ -543,7 +543,7 @@
     "type": "multiple",
     "question": "某工程师使用Ansible在主机中安装Apache时，返回以下报错，哪些选项为造成该报错的可能原因？ 10.0.0.218 | UNREACHABLE!=>{ \"changed\": false, \".………………………\", \"unreachable\":\": true }",
     "options": ["A. 10.0.0.218 启用了 firewalld 且未放通ssh端口", "B. 10.0.0.218 的 ssh 服务将 PasswordAuthentication 设置为no", "C. 控制主机未配置对 10.0.0.218 的免密登录", "D. 控制主机未开启 sshd 服务"],
-    "correctAnswer": ["A",  "C"]
+    "correctAnswer": ["A",  "D"]
   },
   {
     "id": 79,
