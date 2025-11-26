@@ -345,19 +345,19 @@
       "C. 保证数据的高性能读写。",
       "D. 保证数据的高效存储和检索能力。"
     ],
-    "correctAnswer": ["ABCD"]
+    "correctAnswer": ["A","B","C","D"]
   },
   {
     "id": 30,
     "type": "multiple",
-    "question": "openGauss 支持 MOT 内存引擎，可以基于全内存态进行数据存储。下列选项中，哪些属",
+    "question": "openGauss 支持 MOT 内存引擎，可以基于全内存态进行数据存储。下列选项中，哪些属于内存引擎的特点？",
     "options": [
       "A. 处理的数据会因为系统故障而丢失。",
       "B. 在不同的业务负载下，可以达到其他引擎事务处理能力的 3~10 倍。",
       "C. 索引结构以及整体的数据组织都是基于 Masstree 模型实现的。",
       "D. 有较强的事务处理能力。"
     ],
-    "correctAnswer": ["BCD"]
+    "correctAnswer": ["B","C","D"]
   },
   {
     "id": 31,
@@ -369,7 +369,7 @@
       "C. 对于数据库，允许在数据库里创建新的模式。",
       "D. 对于表空间，允许在创建数据库和模式的时候把该表空间指定为缺省表空间。"
     ],
-    "correctAnswer": ["BCD"]
+    "correctAnswer": ["B","C","D"]
   },
   {
     "id": 32,
@@ -381,7 +381,7 @@
       "C. 使用 top 命令查看数据库哪些进程的 CPU 占有率高，然后使用 kill 命令关闭没有使用的",
       "D. 更换和增加高性能的 CPU。"
     ],
-    "correctAnswer": ["ACD"]
+    "correctAnswer": ["A","C","D"]
   },
   {
     "id": 33,
@@ -393,7 +393,7 @@
       "C. 语法兼容",
       "D. 语句不兼容"
     ],
-    "correctAnswer": ["ACD"]
+    "correctAnswer": ["A","C","D"]
   },
   {
     "id": 34,
@@ -405,7 +405,7 @@
       "C. kafka",
       "D. SpringBoot"
     ],
-    "correctAnswer": ["ACD"]
+    "correctAnswer": ["A","C","D"]
   },
   {
     "id": 35,
@@ -417,7 +417,7 @@
       "C. 数据类型的精度是否一致。",
       "D. 是否包含数据库方言 SQL。"
     ],
-    "correctAnswer": ["ABCD"]
+    "correctAnswer": ["A","B","C","D"]
   },
   {
     "id": 36,
@@ -429,7 +429,7 @@
       "C. PGSSLMODE",
       "D. PGSSLKEY"
     ],
-    "correctAnswer": ["AC"]
+    "correctAnswer": ["A","C"]
   },
   {
     "id": 37,
@@ -441,7 +441,7 @@
       "C. 空间的分配和回收",
       "D. 数据库容量的控制"
     ],
-    "correctAnswer": ["ABC"]
+    "correctAnswer": ["A","B","C"]
   },
   {
     "id": 38,
@@ -453,7 +453,7 @@
       "C.用户应该禁止对系统表进行增删改等操作。",
       "D.系统表和系统视图要么只对管理员可见，要么对所有用户可见。"
     ],
-    "correctAnswer": ["ACD"]
+    "correctAnswer": ["A","C","D"]
   },
   {
     "id": 39,
@@ -465,7 +465,7 @@
       "C.各主机间普通用户互信状态正常",
       "D.只能使用 root 用户执行 gs_checkos 命令"
     ],
-    "correctAnswer": ["ABCD"]
+    "correctAnswer": ["A","B","C","D"]
   },
   {
     "id": 40,
@@ -477,7 +477,7 @@
       "C.主备集群副本数必须相同。",
       "D.容灾搭建是将两个互相独立的集群建立容灾关系的过程。"
     ],
-    "correctAnswer": ["ABD"]
+    "correctAnswer": ["A","B","D"]
   },
   {
     "id": 41,
@@ -489,7 +489,7 @@
       "C.monadmin",
       "D.createdb"
     ],
-    "correctAnswer": ["AC"]
+    "correctAnswer": ["A","C"]
   },
   {
     "id": 42,
@@ -501,7 +501,7 @@
       "C. 跟 VACUUM 相比，VACUUM FULL 所花费的时间更长。",
       "D. VACUUM 可回收已更新或已删除的数据所占据的磁盘空间，同时将小数据文件合并。"
     ],
-    "correctAnswer": ["ABC"]
+    "correctAnswer": ["A","B","C"]
   },
   {
     "id": 43,
@@ -513,7 +513,7 @@
       "C.存储过程可以封装",
       "D.减少 SQL 语句的重复编写数量"
     ],
-    "correctAnswer": ["BCD"]
+    "correctAnswer": ["B","C","D"]
   },
   {
     "id": 44,
@@ -525,7 +525,7 @@
       "C.存储过程的创建和执行与函数相近",
       "D.存储过程体的语法结构与匿名块相同"
     ],
-    "correctAnswer": ["BCD"]
+    "correctAnswer": ["B","C","D"]
   },
   {
     "id": 45,
@@ -537,7 +537,7 @@
       "C.PL/SQL 函数的局部变量保持错误发生时的原值",
       "D.所有该块中写入数据库中的状态保持错误发生时的状态不变"
     ],
-    "correctAnswer": ["AC"]
+    "correctAnswer": ["A","C"]
   },
   {
     "id": 46,
@@ -549,7 +549,7 @@
       "C.列存表",
       "D.unlogged 表"
     ],
-    "correctAnswer": ["ACD"]
+    "correctAnswer": ["A","C","D"]
   },
   {
     "id": 47,
@@ -561,7 +561,7 @@
       "C.用 NULL 语句来说明“不用做任何事情”。",
       "D.不能使某些语句变得有意义。"
     ],
-    "correctAnswer": ["ABC"]
+    "correctAnswer": ["A","B","C"]
   },
   {
     "id": 48,
@@ -573,7 +573,7 @@
       "C.RETURN NOW",
       "D.RETURN NEXT"
     ],
-    "correctAnswer": ["AD"]
+    "correctAnswer": ["A","D"]
   },
   {
     "id": 49,
@@ -585,7 +585,7 @@
       "C.当 Trx1、Trx2 的 lock interval 有重叠",
       "D.当 Trx1、Trx2 的 lock interval 完全重叠"
     ],
-    "correctAnswer": ["CD"]
+    "correctAnswer": ["C","D"]
   },
   {
     "id": 50,
@@ -597,7 +597,7 @@
       "C.保证事务顺序执行",
       "D.不受 MySQL 版本限制"
     ],
-    "correctAnswer": ["BD"]
+    "correctAnswer": ["B","D"]
   },
   {
     "id": 51,
