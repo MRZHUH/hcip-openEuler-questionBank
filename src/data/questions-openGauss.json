@@ -14,7 +14,7 @@
   {
     "id": 2,
     "type": "single",
-    "question": "openGauss 创建数据库时可通过 compatibility_type 参数指定兼容模式，该参数取什么",
+    "question": "openGauss 创建数据库时可通过 compatibility_type 参数指定兼容模式，该参数取什么值代表可兼容 oracle 数据库？",
     "options": [
       "A. A",
       "B. B",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "type": "single",
-    "question": "关于数据类型 ZEROFILL 在 MySQL 和 openGauss 两种数据库之间的区别，说法错误的是哪",
+    "question": "关于数据类型 ZEROFILL 在 MySQL 和 openGauss 两种数据库之间的区别，说法错误的是哪一个选项？",
     "options": [
       "A. openGauss 只有整数类型支持 ZEROFILL，等价于 UNSIGNED 属性，但没有填充 0 的功能。",
       "B. MySQL 整数及小数类型支持 ZEROFILL，等价于 UNSIGNED 属性。",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "type": "single",
-    "question": "openGauss 资源池化的架构中，哪个组件将主备内存融合，提供内存池化能力，进而实",
+    "question": "openGauss 资源池化的架构中，哪个组件将主备内存融合，提供内存池化能力，进而实现备机实时一致性读功能？",
     "options": [
       "A.DSS",
       "B.SCM",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "type": "single",
-    "question": "openGauss 同时支持行存引擎和列存引擎。下列选项中，哪个选项不属于行存引擎的特",
+    "question": "openGauss 同时支持行存引擎和列存引擎。下列选项中，哪个选项不属于行存引擎的特点？",
     "options": [
       "A. 存储的基本单位是 CU",
       "B. 同一个数据页面中会同时存有不同版本的同一行数据",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "type": "single",
-    "question": "openGauss 的后台辅助线程中，哪个是审计线程，负责获取审计数据，并保存在审计文",
+    "question": "openGauss 的后台辅助线程中，哪个是审计线程，负责获取审计数据，并保存在审计文件中？",
     "options": [
       "A.Jobworker",
       "B.Auditor",
@@ -158,7 +158,7 @@
   {
     "id": 14,
     "type": "single",
-    "question": "openGauss 提供了批处理模式，即通过 gsql 工具实现对 SQL 语句的批量处理。下列",
+    "question": "openGauss 提供了批处理模式，即通过 gsql 工具实现对 SQL 语句的批量处理。下列对批处理模式的说法，错误的是哪一项？",
     "options": [
       "A. 批处理模式，是交互式查询方式中的一种。",
       "B. 可以重复运行查询，将其设为脚本可以避免每次进行重复输入。",
@@ -182,7 +182,7 @@
   {
     "id": 16,
     "type": "single",
-    "question": "存储过程中声明的变量都有一定的作用域，表示变量在代码块中的可访问性和可用性，",
+    "question": "存储过程中声明的变量都有一定的作用域，表示变量在代码块中的可访问性和可用性，关于变量的作用域的说法错误的是哪个选项？",
     "options": [
       "A.结构快内层的定义会覆盖外层的定义",
       "B.外部块能访问嵌套块中的变量",
@@ -242,7 +242,7 @@
   {
     "id": 21,
     "type": "single",
-    "question": "openGauss 在 B 兼容模式下，通过内核及 dolphin 插件，支持了绝大多数 MySQL 的语法",
+    "question": "openGauss 在 B 兼容模式下，通过内核及 dolphin 插件，支持了绝大多数 MySQL 的语法及功能，可以兼容 MySQL 常用语法和全量语法的比例分别是多少？",
     "options": [
       "A.100% 90%",
       "B.100% 80%",
@@ -302,7 +302,7 @@
   {
     "id": 26,
     "type": "single",
-    "question": "增量迁移工具 gs_replicate 中，关于事务粒度并行回放的工作原理，错误的是哪一个",
+    "question": "增量迁移工具 gs_replicate 中，关于事务粒度并行回放的工作原理，错误的是哪一个选项？",
     "options": [
       "A.如果两个事务能在同一段时间内获取各自的锁，说明能并行执行。",
       "B.基于表粒度并行实现并行回放。",
@@ -314,7 +314,7 @@
   {
     "id": 27,
     "type": "single",
-    "question": "下列审计开关中，哪个是用户访问越权审计的开关，负责开启或关闭用户越权操作审计",
+    "question": "下列审计开关中，哪个是用户访问越权审计的开关，负责开启或关闭用户越权操作审计功能？",
     "options": [
       "A.audit_dml_state",
       "B.audit_user_locked",
@@ -374,7 +374,7 @@
   {
     "id": 32,
     "type": "multiple",
-    "question": "针对 openGauss 数据库中，CPU 占有率高的异常现象，下列处理方法正确的是哪几个选",
+    "question": "针对 openGauss 数据库中，CPU 占有率高的异常现象，下列处理方法正确的是哪几个选项？",
     "options": [
       "A. 使用 gs_expand 工具扩容，增加新的主机均衡 CPU 占有率。",
       "B. 全库进行 VACUUM FULL 操作。",
@@ -422,7 +422,7 @@
   {
     "id": 36,
     "type": "multiple",
-    "question": "SSL 认证分为单向认证和双向认证两种方式，其中单向认证方式下，客户端需要设置的",
+    "question": "SSL 认证分为单向认证和双向认证两种方式，其中单向认证方式下，客户端需要设置的环境变量有哪些？",
     "options": [
       "A. PGSSLROOTCERT",
       "B. PGSSLCERT",
@@ -494,7 +494,7 @@
   {
     "id": 42,
     "type": "multiple",
-    "question": "VACUUM 命令和 VACUUM FULL 命令可以对表进行维护，关于两个命令的区别和功能，说",
+    "question": "VACUUM 命令和 VACUUM FULL 命令可以对表进行维护，关于两个命令的区别和功能，说法正确的哪几个选项？",
     "options": [
       "A. VACUUM 可避免执行的事务数超过数据库阈值时，事务 ID 重叠造成的原有数据丢失。",
       "B. VACUUM FULL 可回收已更新或已删除的数据所占据的磁盘空间，同时将小数据文件合并。",
@@ -530,7 +530,7 @@
   {
     "id": 45,
     "type": "multiple",
-    "question": "当存储过程的错误捕获语句 EXCEPTION 捕获到一个错误时，PL/SQL 函数的局部变量和",
+    "question": "当存储过程的错误捕获语句 EXCEPTION 捕获到一个错误时，PL/SQL 函数的局部变量和数据库状态分别会发生哪些变化？",
     "options": [
       "A.所有该块中想写入数据库中的状态都回滚",
       "B.PL/SQL 函数的局部变量的值会回滚",
@@ -566,7 +566,7 @@
   {
     "id": 48,
     "type": "multiple",
-    "question": "在编写存储过程或者函数时，openGauss 提供多种方式返回数据，其中哪些方式只适用",
+    "question": "在编写存储过程或者函数时，openGauss 提供多种方式返回数据，其中哪些方式只适用于函数，不适用于存储过程？",
     "options": [
       "A.RETURN QUERY",
       "B.RETURN",
@@ -578,7 +578,7 @@
   {
     "id": 49,
     "type": "multiple",
-    "question": "关于增量迁移中 Sink 端事务粒度的并行回放，什么情况下，Trx1、Trx2 两个事务可以",
+    "question": "关于增量迁移中 Sink 端事务粒度的并行回放，什么情况下，Trx1、Trx2 两个事务可以并行回放？",
     "options": [
       "A.Trx2 结束的 lock interval 早于 Trx1 开始的",
       "B.Trx1 结束的 lock interval 早于 Trx2 开始的",
@@ -590,7 +590,7 @@
   {
     "id": 50,
     "type": "multiple",
-    "question": "增量迁移有两种并行回放：基于库+表的并行回放和利用 MySQL 的并行复制机制，基于",
+    "question": "增量迁移有两种并行回放：基于库+表的并行回放和利用 MySQL 的并行复制机制，基于库+表的并行回放有哪些优点？",
     "options": [
       "A.数据一致",
       "B.实现相对简单",
@@ -626,7 +626,7 @@
   {
     "id": 53,
     "type": "multiple",
-    "question": "SSL 认证在进行配置文件时，SSL 证书需要提前从 CA 认证中心申请一系列正式的相关文",
+    "question": "SSL 认证在进行配置文件时，SSL 证书需要提前从 CA 认证中心申请一系列正式的相关文件，主要包括哪些东西？",
     "options": [
       "A.数字签名",
       "B.服务器证书",
@@ -662,7 +662,7 @@
   {
     "id": 56,
     "type": "judgment",
-    "question": "CMS 负责检查 CMA 健康状态。若 CMA 进程不存在，拉起进程；若进程僵死，则杀死僵死",
+    "question": "CMS 负责检查 CMA 健康状态。若 CMA 进程不存在，拉起进程；若进程僵死，则杀死僵死进程，重新拉起。",
     "options": [
       "正确",
       "错误"
@@ -672,7 +672,7 @@
   {
     "id": 57,
     "type": "judgment",
-    "question": "数据库只读状态为集群级设置，集群中任何一个节点磁盘使用达到阈值，集群都会被设",
+    "question": "数据库只读状态为集群级设置，集群中任何一个节点磁盘使用达到阈值，集群都会被设置为只读模式，导致写请求返回失败。",
     "options": [
       "正确",
       "错误"
@@ -682,7 +682,7 @@
   {
     "id": 58,
     "type": "judgment",
-    "question": "相比于行存表，列存表有很多优势，比如压缩比很高，低 IO 消耗、提升查询性能，结",
+    "question": "相比于行存表，列存表有很多优势，比如压缩比很高，低 IO 消耗、提升查询性能，结合向量化执行引擎、CPU 的缓存命中率比较高等。但列存表不支持 MVCC 多版本控制。",
     "options": [
       "正确",
       "错误"
@@ -692,7 +692,8 @@
   {
     "id": 59,
     "type": "judgment",
-    "question": "对象所有者的权限（例如 ALTER、DROP、COMMENT、INDEX、VACUUM、GRANT 和 REVOKE）",
+    "question": "对象所有者的权限（例如 ALTER、DROP、COMMENT、INDEX、VACUUM、GRANT 和 REVOKE）是隐式拥有的，即只要拥有对象就可以执行对象所有者的这些隐式权限。但对象所有者不可
+以撤销自己的普通权限。",
     "options": [
       "正确",
       "错误"
@@ -702,7 +703,9 @@
   {
     "id": 60,
     "type": "judgment",
-    "question": "ANY 权限属于数据库内的权限，只对授予该权限的数据库内的对象有效，例如 SELECT ANY",
+    "question": "ANY 权限属于数据库内的权限，只对授予该权限的数据库内的对象有效，例如 SELECT ANY TABLE 只允许用户查看当前数据库内的所有用户表数据，对其他数据库内的用户表无查看权
+限。
+正确",
     "options": [
       "正确",
       "错误"
@@ -712,7 +715,7 @@
   {
     "id": 61,
     "type": "judgment",
-    "question": "只有主集群发生异常，灾备集群才可以通过升主成为正常集群对外提供服务，并脱离容",
+    "question": "只有主集群发生异常，灾备集群才可以通过升主成为正常集群对外提供服务，并脱离容灾。",
     "options": [
       "正确",
       "错误"
@@ -722,7 +725,7 @@
   {
     "id": 62,
     "type": "judgment",
-    "question": "对于多次运行的复杂 SQL，使用存储过程封装，可以支持缓存 SQL 计划，减少了生成计",
+    "question": "对于多次运行的复杂 SQL，使用存储过程封装，可以支持缓存 SQL 计划，减少了生成计划的时间。",
     "options": [
       "正确",
       "错误"
@@ -732,7 +735,7 @@
   {
     "id": 63,
     "type": "judgment",
-    "question": "ODBC 应用程序和 ODBC 驱动的中间层，对用户提供统一的 API 定义，执行过程会根据数",
+    "question": "ODBC 应用程序和 ODBC 驱动的中间层，对用户提供统一的 API 定义，执行过程会根据数据源的类型加载具体的驱动。",
     "options": [
       "正确",
       "错误"
@@ -742,7 +745,7 @@
   {
     "id": 64,
     "type": "judgment",
-    "question": "基于 Psycopg 的应用开发，可以通过 cursor.fetchall()方法处理结果集，这种方法提",
+    "question": "基于 Psycopg 的应用开发，可以通过 cursor.fetchall()方法处理结果集，这种方法提取查询结果集的下一行，返回一个序列，没有数据可用时则返回空。",
     "options": [
       "正确",
       "错误"
@@ -752,7 +755,7 @@
   {
     "id": 65,
     "type": "judgment",
-    "question": "openGauss 创建数据库时，compatibility_type 参数为 A 的兼容场景下，必须加载",
+    "question": "openGauss 创建数据库时，compatibility_type 参数为 A 的兼容场景下，必须加载dolphin 插件才允许被连接。",
     "options": [
       "正确",
       "错误"
@@ -762,7 +765,7 @@
   {
     "id": 66,
     "type": "judgment",
-    "question": "openGauss 官网发布的数据库安装包在创建 B 库初次连接时会自动加载 dolphin 插件，",
+    "question": "openGauss 官网发布的数据库安装包在创建 B 库初次连接时会自动加载 dolphin 插件，无需手动安装加载。",
     "options": [
       "正确",
       "错误"
@@ -772,7 +775,7 @@
   {
     "id": 67,
     "type": "judgment",
-    "question": "openGauss 中的 LIKE 操作符默认不区分大小写。在 dolphin.b_compatibility_mode 为",
+    "question": "openGauss 中的 LIKE 操作符默认不区分大小写。在 dolphin.b_compatibility_mode 为on 的情况下，LIKE 区分大小写，也可以直接使用 ILIKE 操作符区分大小写。",
     "options": [
       "正确",
       "错误"
@@ -782,7 +785,8 @@
   {
     "id": 68,
     "type": "judgment",
-    "question": "openGauss 中的“||”操作符默认为字符串连接符，当 dolphin.sql_mode 中包含",
+    "question": "openGauss 中的“||”操作符默认为字符串连接符，当 dolphin.sql_mode 中包含pipes_as_concat 时，“||”表示字符串连接符。当不包含 pipes_as_concat 时，“||”表
+示或操作符。",
     "options": [
       "正确",
       "错误"
@@ -792,7 +796,7 @@
   {
     "id": 69,
     "type": "judgment",
-    "question": "空闲空间管理中的页面级清理机制由页面的空闲空间阈值触发，仅改动页面本身，不改",
+    "question": "空闲空间管理中的页面级清理机制由页面的空闲空间阈值触发，仅改动页面本身，不改动对应的索引页面，可以很好的解决同一条数据记录的历史遗留版本。",
     "options": [
       "正确",
       "错误"
@@ -802,7 +806,7 @@
   {
     "id": 70,
     "type": "judgment",
-    "question": "select * from dbe_perf.OPERATOR_RUNTIME;以上语句用于查看当前的用户在数据库主",
+    "question": "select * from dbe_perf.OPERATOR_RUNTIME;以上语句用于查看当前的用户在数据库主节点上正在执行的作业的负载管理记录。",
     "options": [
       "正确",
       "错误"
@@ -812,7 +816,7 @@
   {
     "id": 71,
     "type": "judgment",
-    "question": "以下这些对象的权限会授予 PUBLIC：数据库的 CONNECT 权限、表的 CREATE TABLE 权限、",
+    "question": "以下这些对象的权限会授予 PUBLIC：数据库的 CONNECT 权限、表的 CREATE TABLE 权限、函数的 EXECUTE 特权、语言和数据类型的 USAGE 特权。",
     "options": [
       "正确",
       "错误"
@@ -832,7 +836,7 @@
   {
     "id": 73,
     "type": "judgment",
-    "question": "删除存储过程时，如果不指定参数列表，且存在同名重载存储过程，删除命令将随机选",
+    "question": "删除存储过程时，如果不指定参数列表，且存在同名重载存储过程，删除命令将随机选择一个进行删除。",
     "options": [
       "正确",
       "错误"
@@ -842,7 +846,7 @@
   {
     "id": 74,
     "type": "judgment",
-    "question": "存储过程中的匿名块（Anonymous Block）一般用于不频繁执行的脚本或重复进行的活",
+    "question": "存储过程中的匿名块（Anonymous Block）一般用于不频繁执行的脚本或重复进行的活动。它们在一个会话中执行，并不被存储。",
     "options": [
       "正确",
       "错误"
@@ -852,7 +856,7 @@
   {
     "id": 75,
     "type": "judgment",
-    "question": "关于等值密态查询，在数据库服务侧，加密列的数据始终以密文形态存在，整个查询也",
+    "question": "关于等值密态查询，在数据库服务侧，加密列的数据始终以密文形态存在，整个查询也在密文形态下实现的，并且需要采用不确定性加密，使得明文数据加密后更加安全。",
     "options": [
       "正确",
       "错误"
